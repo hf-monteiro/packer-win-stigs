@@ -1,0 +1,7 @@
+- hosts: all
+  roles:
+    - win-2k16-stig
+  ignore_errors: true
+  ignore_unreachable: yes
+
+

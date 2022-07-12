@@ -1,5 +1,5 @@
 build {
-  name = "windows-server-2016-builder"
+  name = var.builder_instance_name
   source "source.amazon-ebs.vm" {
     winrm_username = "Administrator"
   }

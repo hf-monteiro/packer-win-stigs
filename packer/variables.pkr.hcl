@@ -27,3 +27,8 @@ variable "security_group_id" {
   type    = string
   default = "sg-0000w00000" #SG ID information (you can find that information on your AWS account)
 }
+
+variable "builder_instance_name" {
+  type    = string
+  default = "windows-server-2016-builder" #default ec2 builder name
+}

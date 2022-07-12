@@ -1,12 +1,12 @@
 locals { timestamp = regex_replace(timestamp(), "[- TZ:]", "") }
 
 source "amazon-ebs" "vm" {
-  region                      = "${var.region}"
-  subnet_id                   = "${var.subnet_id}"
-  security_group_id           = "${var.security_group_id}"
+  region                      = var.region
+  subnet_id                   = var.subnet_id
+  security_group_id           = var.security_group_id
   ami_name                    = "${var.ami_name}-${local.timestamp}"
-  source_ami                  = "${var.base_ami}"
-  instance_type               = "${var.instance_type}"
+  source_ami                  = var.base_ami
+  instance_type               = var.instance_type
   force_deregister            = true
   communicator                = "winrm"
   winrm_insecure              = true

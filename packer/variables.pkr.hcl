@@ -15,7 +15,7 @@ variable "ami_name" {
 
 variable "base_ami" {
   type    = string
-  default = "ami-0c54d1ef00a55321b" #subnet ID information (you can find that information on your AWS account)
+  default = "ami-0c54d1ef00a55321b" #AMI ID information (you can find that information on your AWS account)
 }
 
 variable "subnet_id" {
